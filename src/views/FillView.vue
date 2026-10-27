@@ -100,9 +100,6 @@ async function submit() {
   <div v-else-if="done" class="card empty">
     <h1>Terima kasih! 🎉</h1>
     <p>Jawaban Anda sudah tersimpan.</p>
-    <div class="row" style="justify-content: center">
-      <RouterLink :to="{ name: 'result', params: { id: surveyId } }" class="btn btn-primary">Lihat hasil</RouterLink>
-    </div>
   </div>
 
   <template v-else>
