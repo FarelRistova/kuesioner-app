@@ -91,11 +91,6 @@ async function submit() {
   submitting.value = false
 }
 
-function fillAgain() {
-  done.value = false
-  name.value = ''
-  for (const k of Object.keys(answers)) delete answers[k]
-}
 </script>
 
 <template>
@@ -107,7 +102,6 @@ function fillAgain() {
     <p>Jawaban Anda sudah tersimpan.</p>
     <div class="row" style="justify-content: center">
       <RouterLink :to="{ name: 'result', params: { id: surveyId } }" class="btn btn-primary">Lihat hasil</RouterLink>
-      <button class="btn" @click="fillAgain">Isi lagi</button>
     </div>
   </div>
 
